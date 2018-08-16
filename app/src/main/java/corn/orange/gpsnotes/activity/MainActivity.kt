@@ -1,7 +1,8 @@
-package corn.orange.gpsnotes
+package corn.orange.gpsnotes.activity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import corn.orange.gpsnotes.R
 
 class MainActivity : AppCompatActivity()
 {
