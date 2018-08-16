@@ -1,5 +1,6 @@
 package corn.orange.gpsnotes.model
 
-class Note
+class Note(val title:String,val content: String )
 {
+
 }
