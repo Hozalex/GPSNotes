@@ -3,4 +3,5 @@
     <dimen name="padding">8dp</dimen>
     <dimen name="margin">16dp</dimen>
     <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="card_view_corner">6dp</dimen>
 </resources>
