@@ -20,9 +20,6 @@ class MainActivity : AppCompatActivity()
 {
 
     private lateinit var notesArrayList: ArrayList<Note>
-    private lateinit var noteAdapter: RecyclerView.Adapter<*>
-    private lateinit var viewManager: RecyclerView.LayoutManager
-    private lateinit var note: Note
     val TAG = "MainActivity"
 
     override fun onCreate(savedInstanceState: Bundle?)
@@ -30,50 +27,47 @@ class MainActivity : AppCompatActivity()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        viewManager = LinearLayoutManager(this)
-        notesArrayList = ArrayList(10)
-        notesArrayList.add(Note("First Note", "Hello World"))
+        initVariables()
         Log.d(TAG, notesArrayList[0].getTitle() + " " + notesArrayList[0].getContent())
         setSupportActionBar(my_toolbar)
         addAdapter()
 
     }
 
+    //initialization variables
+    private fun initVariables()
+    {
+        notesArrayList = ArrayList(10)
+        notesArrayList.add(Note("First Note", "Hello World"))
+    }
+
+    //add recycler view to activity
     private fun addAdapter()
     {
-//        viewManager = LinearLayoutManager(applicationContext)
-//        noteAdapter = NoteAdapter(notesArrayList, object : NoteAdapter.OnNoteClickListener
-//        {
-//            override fun onNoteClick(notePosition: Int)
-//            {
-//                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-//            }
-//        })
-//        val recyclerView = findViewById<RecyclerView>(R.id.rvNotes).apply {
-//            setHasFixedSize(true)
-//            layoutManager = viewManager
-//            adapter = noteAdapter
-//        }
-
+        //create adapter and set it to recycler view
         rvNotes.adapter = NoteAdapter(notesArrayList, object : NoteAdapter.OnNoteClickListener
         {
             override fun onNoteClick(notePosition: Int)
             {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                Toast.makeText(applicationContext, "Click Note", Toast.LENGTH_SHORT).show()
             }
         })
+        //recycler view settings
         rvNotes.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(rvNotes.context)
         }
     }
 
+    //create menu on app bar
     override fun onCreateOptionsMenu(menu: Menu?): Boolean
     {
+        //inflate menu from main_menu
         menuInflater.inflate(R.menu.main_menu, menu)
         return super.onCreateOptionsMenu(menu)
     }
 
+    //set up press on the menu button
     override fun onOptionsItemSelected(item: MenuItem?): Boolean
     {
         when (item?.itemId)
