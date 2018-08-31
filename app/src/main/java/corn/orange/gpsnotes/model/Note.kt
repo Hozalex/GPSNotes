@@ -9,6 +9,6 @@ class Note(private val title: String, private val content: String)
 
     fun getContent(): String
     {
-        return title
+        return content
     }
 }

@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="100dp"
     android:layout_margin="5dp"
-    app:cardCornerRadius="@dimen/card_view_corner">
+    app:cardCornerRadius="@dimen/card_view_corner"
+    app:cardElevation="5dp"
+    app:cardBackgroundColor="#e8e8e8">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,6 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="@string/note_description"
+            style="@style/notesTitleText"
             android:padding="@dimen/padding" />
 
         <TextView
