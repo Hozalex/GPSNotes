@@ -9,6 +9,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import corn.orange.gpsnotes.R
+import corn.orange.gpsnotes.R.id.menu_add_note
+import corn.orange.gpsnotes.R.id.menu_clear_note
 import corn.orange.gpsnotes.adapter.NoteAdapter
 import corn.orange.gpsnotes.fragment.NoteFragment
 import corn.orange.gpsnotes.model.Note

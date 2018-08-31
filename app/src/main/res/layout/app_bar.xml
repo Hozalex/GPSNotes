@@ -7,6 +7,8 @@
     tools:context=".activity.MainActivity">
 
     <android.support.design.widget.AppBarLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
@@ -24,4 +26,3 @@
     <include layout="@layout/content_main" />
 
 
-</android.support.design.widget.CoordinatorLayout>
