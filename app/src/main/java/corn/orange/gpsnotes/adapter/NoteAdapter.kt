@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
 import corn.orange.gpsnotes.R
-import corn.orange.gpsnotes.model.Note
+import corn.orange.gpsnotes.persistence.Note
 
 //adapter for RecyclerView
 class NoteAdapter(private val notesArrayList: ArrayList<Note>, private var onNoteClickListener: OnNoteClickListener)

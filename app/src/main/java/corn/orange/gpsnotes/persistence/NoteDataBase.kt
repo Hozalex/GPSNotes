@@ -1,10 +1,9 @@
-package corn.orange.gpsnotes.dao
+package corn.orange.gpsnotes.persistence
 
 import android.arch.persistence.room.Database
 import android.arch.persistence.room.Room
 import android.arch.persistence.room.RoomDatabase
 import android.content.Context
-import corn.orange.gpsnotes.model.Note
 
 @Database(entities = [Note::class], version = 1)
 abstract class NoteDataBase : RoomDatabase()

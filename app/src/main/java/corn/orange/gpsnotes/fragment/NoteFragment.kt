@@ -9,7 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import corn.orange.gpsnotes.R
 import corn.orange.gpsnotes.adapter.NoteAdapter
-import corn.orange.gpsnotes.model.Note
+import corn.orange.gpsnotes.persistence.Note
 
 class NoteFragment : Fragment()
 {

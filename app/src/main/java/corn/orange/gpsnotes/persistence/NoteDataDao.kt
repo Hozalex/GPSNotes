@@ -1,10 +1,9 @@
-package corn.orange.gpsnotes.dao
+package corn.orange.gpsnotes.persistence
 
 import android.arch.persistence.room.Dao
 import android.arch.persistence.room.Insert
 import android.arch.persistence.room.OnConflictStrategy.REPLACE
 import android.arch.persistence.room.Query
-import corn.orange.gpsnotes.model.Note
 
 @Dao
 interface NoteDataDao
