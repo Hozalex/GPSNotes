@@ -1,10 +1,34 @@
-package corn.orange.gpsnotes.DAO
+package corn.orange.gpsnotes.dao
 
 import android.arch.persistence.room.Database
+import android.arch.persistence.room.Room
 import android.arch.persistence.room.RoomDatabase
+import android.content.Context
 import corn.orange.gpsnotes.model.Note
 
-@Database(entities = arrayOf(Note::class), version = 1)
+@Database(entities = [Note::class], version = 1)
 abstract class NoteDataBase : RoomDatabase()
 {
+    abstract fun noteDataDao(): NoteDataDao
+
+    companion object
+    {
+        private var INSTANCE: NoteDataBase? = null
+
+        fun getInstance(context: Context): NoteDataBase?
+        {
+            if (INSTANCE == null)
+            {
+                synchronized(NoteDataBase::class) {
+                    INSTANCE = Room.databaseBuilder(context.applicationContext, NoteDataBase::class.java, "notes.db").build()
+                }
+            }
+            return INSTANCE
+        }
+
+        fun destroyInstance()
+        {
+            INSTANCE = null
+        }
+    }
 }

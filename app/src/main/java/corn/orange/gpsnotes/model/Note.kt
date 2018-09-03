@@ -1,10 +1,15 @@
 package corn.orange.gpsnotes.model
 
+import android.arch.persistence.room.ColumnInfo
 import android.arch.persistence.room.Entity
+import android.arch.persistence.room.PrimaryKey
 
-@Entity
-class Note(private val title: String, private val content: String)
+@Entity(tableName = "notes")
+class Note(@PrimaryKey(autoGenerate = true) private var id: Long?,
+           @ColumnInfo(name = "title") private val title: String,
+           @ColumnInfo(name = "content") private val content: String)
 {
+
     fun getTitle(): String
     {
         return title
