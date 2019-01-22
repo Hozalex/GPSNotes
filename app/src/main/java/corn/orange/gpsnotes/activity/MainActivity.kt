@@ -3,17 +3,13 @@ package corn.orange.gpsnotes.activity
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import corn.orange.gpsnotes.R
-import corn.orange.gpsnotes.R.id.menu_add_note
-import corn.orange.gpsnotes.R.id.menu_clear_note
 import corn.orange.gpsnotes.adapter.NoteAdapter
-import corn.orange.gpsnotes.fragment.NoteFragment
-import corn.orange.gpsnotes.model.Note
+import corn.orange.gpsnotes.persistence.Note
 import kotlinx.android.synthetic.main.app_bar.*
 import kotlinx.android.synthetic.main.content_main.*
 import kotlinx.android.synthetic.main.content_main.view.*
@@ -29,6 +25,7 @@ class MainActivity : AppCompatActivity()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         initVariables()
         Log.d(TAG, notesArrayList[0].getTitle() + " " + notesArrayList[0].getContent())
         setSupportActionBar(my_toolbar)
@@ -40,7 +37,6 @@ class MainActivity : AppCompatActivity()
     private fun initVariables()
     {
         notesArrayList = ArrayList(10)
-        notesArrayList.add(Note("First Note", "Hello World"))
     }
 
     //add recycler view to activity
