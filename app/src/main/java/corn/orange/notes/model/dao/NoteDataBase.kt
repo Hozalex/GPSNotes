@@ -1,4 +1,4 @@
-package corn.orange.notes.dao
+package corn.orange.notes.model.dao
 
 import android.arch.persistence.room.Database
 import android.arch.persistence.room.RoomDatabase

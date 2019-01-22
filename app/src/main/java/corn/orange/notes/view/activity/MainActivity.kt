@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         initVariables()
-        Log.d(TAG, notesArrayList[0].getTitle() + " " + notesArrayList[0].getContent())
+        Log.d(TAG, notesArrayList[0].title + " " + notesArrayList[0].content)
         setSupportActionBar(my_toolbar)
         addAdapter()
     }
