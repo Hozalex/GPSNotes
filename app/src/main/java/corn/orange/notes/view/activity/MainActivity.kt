@@ -10,11 +10,15 @@ import android.widget.Toast
 import corn.orange.notes.R
 import corn.orange.notes.view.adapter.NoteAdapter
 import corn.orange.notes.model.Note
+import corn.orange.notes.view.interfaces.MainViewInterface
 import kotlinx.android.synthetic.main.app_bar.*
 import kotlinx.android.synthetic.main.content_main.*
 import kotlinx.android.synthetic.main.content_main.view.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), MainViewInterface {
+    override fun showNotes(note: Note) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 
     private lateinit var notesArrayList: ArrayList<Note>
     val TAG = "MainActivity"
