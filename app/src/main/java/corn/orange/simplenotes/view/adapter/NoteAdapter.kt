@@ -1,26 +1,24 @@
-package corn.orange.notes.view.adapter
+package corn.orange.simplenotes.view.adapter
 
-import android.support.v7.widget.CardView
-import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
-import corn.orange.notes.R
-import corn.orange.notes.model.Note
+import corn.orange.simplenotes.R
+import corn.orange.simplenotes.model.Note
 
 //adapter for RecyclerView
 class NoteAdapter(private val notesArrayList: ArrayList<Note>, private var onNoteClickListener: OnNoteClickListener)
-    : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
+    : androidx.recyclerview.widget.RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
     val TAG = "NoteAdapter"
 
-    class NoteViewHolder(val cardView: CardView) : RecyclerView.ViewHolder(cardView)
+    class NoteViewHolder(val cardView: androidx.cardview.widget.CardView) : androidx.recyclerview.widget.RecyclerView.ViewHolder(cardView)
 
     //create view holder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
         //create noteViewHolder from card layout
         val viewHolder = NoteViewHolder(LayoutInflater.from(parent.context)
-                .inflate(R.layout.card, parent, false) as CardView)
+                .inflate(R.layout.card, parent, false) as androidx.cardview.widget.CardView)
         //set clickListener for viewHolder
         viewHolder.itemView.setOnClickListener {
             onNoteClickListener.onNoteClick(viewHolder.adapterPosition)

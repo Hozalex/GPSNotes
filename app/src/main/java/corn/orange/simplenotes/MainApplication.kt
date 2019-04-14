@@ -1,7 +1,7 @@
-package corn.orange.notes
+package corn.orange.simplenotes
 
 import android.app.Application
-import corn.orange.notes.model.dao.NoteDataBase
+import corn.orange.simplenotes.model.dao.NoteDataBase
 
 class MainApplication : Application() {
 

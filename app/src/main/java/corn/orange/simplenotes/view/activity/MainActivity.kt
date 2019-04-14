@@ -1,24 +1,19 @@
-package corn.orange.notes.view.activity
+package corn.orange.simplenotes.view.activity
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
+import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import corn.orange.notes.R
-import corn.orange.notes.view.adapter.NoteAdapter
-import corn.orange.notes.model.Note
-import corn.orange.notes.view.interfaces.MainViewInterface
+import corn.orange.simplenotes.R
+import corn.orange.simplenotes.view.adapter.NoteAdapter
+import corn.orange.simplenotes.model.Note
 import kotlinx.android.synthetic.main.app_bar.*
 import kotlinx.android.synthetic.main.content_main.*
 import kotlinx.android.synthetic.main.content_main.view.*
 
-class MainActivity : AppCompatActivity(), MainViewInterface {
-    override fun showNotes(note: Note) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+class MainActivity : AppCompatActivity() {
 
     private lateinit var notesArrayList: ArrayList<Note>
     val TAG = "MainActivity"
@@ -50,7 +45,7 @@ class MainActivity : AppCompatActivity(), MainViewInterface {
         //recycler view settings
         rvNotes.apply {
             setHasFixedSize(true)
-            layoutManager = LinearLayoutManager(rvNotes.context)
+            layoutManager = androidx.recyclerview.widget.LinearLayoutManager(rvNotes.context)
         }
     }
 

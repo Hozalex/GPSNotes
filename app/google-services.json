@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "983644110656",
+    "firebase_url": "https://simplenotes-94035.firebaseio.com",
+    "project_id": "simplenotes-94035",
+    "storage_bucket": "simplenotes-94035.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:983644110656:android:a482a6da5e39c8a1",
+        "android_client_info": {
+          "package_name": "corn.orange.simplenotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "983644110656-tatanmejge0qap8gd8gpi25ri65kf3mi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9nKVhiOHeIkQb9YPIcWXdnt2McyEGP9E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "983644110656-tatanmejge0qap8gd8gpi25ri65kf3mi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

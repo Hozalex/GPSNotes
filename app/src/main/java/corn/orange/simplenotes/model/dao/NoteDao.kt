@@ -1,9 +1,9 @@
-package corn.orange.notes.model.dao
+package corn.orange.simplenotes.model.dao
 
-import android.arch.persistence.room.Dao
-import android.arch.persistence.room.Insert
-import android.arch.persistence.room.Query
-import corn.orange.notes.model.Note
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.Query
+import corn.orange.simplenotes.model.Note
 
 @Dao
 interface NoteDao {

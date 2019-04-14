@@ -1,10 +1,10 @@
-package corn.orange.notes.model.dao
+package corn.orange.simplenotes.model.dao
 
-import android.arch.persistence.room.Database
-import android.arch.persistence.room.Room
-import android.arch.persistence.room.RoomDatabase
+import androidx.room.Database
+import androidx.room.Room
+import androidx.room.RoomDatabase
 import android.content.Context
-import corn.orange.notes.model.Note
+import corn.orange.simplenotes.model.Note
 
 @Database(entities = [Note::class], version = 1)
 abstract class NoteDataBase : RoomDatabase() {
