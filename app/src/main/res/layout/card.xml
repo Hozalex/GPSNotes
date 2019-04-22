@@ -1,34 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/card_view"
-    android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:layout_margin="5dp"
-    app:cardCornerRadius="@dimen/card_view_corner"
-    app:cardElevation="5dp"
-    app:cardBackgroundColor="#e8e8e8">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
+    <data>
+
+        <variable
+            name="noteTitle"
+            type="String" />
+
+        <variable
+            name="note"
+            type="String" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="100dp"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="#e8e8e8"
+        app:cardCornerRadius="@dimen/card_view_corner"
+        app:cardElevation="5dp">
 
-        <TextView
-            android:id="@+id/tvNoteTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="@string/note_description"
-            style="@style/notesTitleText"
-            android:padding="@dimen/padding" />
-
-        <TextView
-            android:id="@+id/tvNote"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_note"
-            android:padding="@dimen/padding" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tvNoteTitle"
+                style="@style/notesTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/note_description"
+                android:padding="@dimen/padding"
+                android:text="@{noteTitle}" />
 
-</androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/tvNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_note"
+                android:padding="@dimen/padding"
+                android:text="@{note}" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
