@@ -32,6 +32,15 @@ class MainActivity : AppCompatActivity() {
     private fun initVariables() {
         notesArrayList = ArrayList(10)
         notesArrayList.add(Note("First Note", "Hello World"))
+        notesArrayList.add(Note("Second Note", "Bye!"))
+        notesArrayList.add(Note("Second Note", "Bye!"))
+        notesArrayList.add(Note("Second Note", "Bye!"))
+        notesArrayList.add(Note("Second Note", "Bye!"))
+        notesArrayList.add(Note("Second Note", "Bye!"))
+        notesArrayList.add(Note("Second Note", "Bye!"))
+        notesArrayList.add(Note("Second Note", "Bye!"))
+        notesArrayList.add(Note("Second Note", "Bye!"))
+        notesArrayList.add(Note("Second Note", "Bye!"))
     }
 
     //add recycler view to activity
