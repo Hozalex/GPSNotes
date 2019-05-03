@@ -12,7 +12,8 @@ class NoteAdapter(private val notesArrayList: ArrayList<Note>, private var onNot
     : androidx.recyclerview.widget.RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
     val TAG = "NoteAdapter"
 
-    class NoteViewHolder(val cardView: androidx.cardview.widget.CardView) : androidx.recyclerview.widget.RecyclerView.ViewHolder(cardView)
+    class NoteViewHolder(val cardView: androidx.cardview.widget.CardView)
+        : androidx.recyclerview.widget.RecyclerView.ViewHolder(cardView)
 
     //create view holder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {

@@ -5,12 +5,8 @@
     <data>
 
         <variable
-            name="noteTitle"
-            type="String" />
-
-        <variable
             name="note"
-            type="String" />
+            type="corn.orange.simplenotes.model.Note" />
 
     </data>
 
@@ -35,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/note_description"
                 android:padding="@dimen/padding"
-                android:text="@{noteTitle}" />
+                android:text="@{note.title}" />
 
             <TextView
                 android:id="@+id/tvNote"
@@ -43,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_note"
                 android:padding="@dimen/padding"
-                android:text="@{note}" />
+                android:text="@{note.content}" />
 
         </LinearLayout>
 

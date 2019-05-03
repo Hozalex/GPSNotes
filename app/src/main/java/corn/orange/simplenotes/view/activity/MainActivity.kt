@@ -6,10 +6,13 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
 import corn.orange.simplenotes.R
+import corn.orange.simplenotes.databinding.CardBinding
 import corn.orange.simplenotes.view.adapter.NoteAdapter
 import corn.orange.simplenotes.model.Note
 import kotlinx.android.synthetic.main.app_bar.*
+import kotlinx.android.synthetic.main.card.*
 import kotlinx.android.synthetic.main.content_main.*
 import kotlinx.android.synthetic.main.content_main.view.*
 
@@ -21,6 +24,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val binding: CardBinding = DataBindingUtil.setContentView(this, R.layout.card)
 
         initVariables()
         Log.d(TAG, notesArrayList[0].title + " " + notesArrayList[0].content)
